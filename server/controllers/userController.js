@@ -18,7 +18,7 @@ const signupUser = async (req, res) => {
         let user = await userModel.findOne({ email });
 
         // user is already registered
-        if (user) return res.status(400).json('User is already exist');
+        if (user) return res.status(400).json('User already exist');
         user = new userModel({ username, email, password });
 
         // Password Encryption with Bcrypt
