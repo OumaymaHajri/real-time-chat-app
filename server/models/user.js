@@ -9,4 +9,7 @@ const userSchema = new mongoose.Schema({
 }    
 );
 
+// an index for the username field for efficient searching
+userSchema.index({ username: 'text' });
+
 module.exports =  mongoose.model('User',userSchema);

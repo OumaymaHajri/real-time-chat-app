@@ -32,6 +32,17 @@ const getChatMessages = async(req, res) => {
 
 }
 
+const getLastMessage = async (req, res) => {
+    try {
+      const chatId = req.params.chatId;
+      const lastMessage = await messageModel.findOne({ chatId }).sort({ createdAt: -1 }).exec();
+      res.status(200).json(lastMessage);
+    } catch (error) {
+      console.error('Error fetching last message:', error);
+      res.status(500).json(error);
+    }
+  };
+  
 
 
-module.exports = {createMessage,getChatMessages};
+module.exports = {createMessage,getChatMessages,getLastMessage};

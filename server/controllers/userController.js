@@ -73,4 +73,18 @@ const findUser = async (req, res) => {
 
 }
 
-module.exports = { signupUser, loginUser, findUser };
+
+const getUsers = async (req, res) => {
+    try {
+      const searchTerm = req.params.searchTerm;
+      const regex = new RegExp(searchTerm, 'i');  
+  
+      const users = await userModel.find({ username: regex });
+      res.json(users);
+    } catch (error) {
+      console.error('Error fetching users:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  };
+
+module.exports = { signupUser, loginUser, findUser,getUsers };
