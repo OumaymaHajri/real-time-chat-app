@@ -43,7 +43,7 @@ Before you begin, ensure you have the following installed:
 # Features
 - User registration and authentication
 - Real-time chat functionality
-- Search for a user to start a conversation
+- Search for a username to initiate a new conversation
   
 # API Endpoints
  
