@@ -14,7 +14,7 @@ export default function Conversation({ chat, user }) {
   useEffect(() => {
     const fetchLastMessageForChat = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/messages/lastMessage/${chat?._id}`);
+        const response = await axios.get(`http://localhost:5000/api/messages/last-message/${chat?._id}`);
         setLastMessage(response.data);
       } catch (error) {
         console.error('Error fetching last message for chat:', error);

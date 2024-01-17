@@ -27,7 +27,7 @@ export default function Chat() {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/users/getUsers/${searchText}`);
+        const response = await axios.get(`http://localhost:5000/api/users/users/${searchText}`);
         setSearchResults(response.data);
       } catch (error) {
         console.error('Error fetching search results:', error);
@@ -52,7 +52,7 @@ export default function Chat() {
         firstId: user?._id,
         secondId: recipient?._id,
      };
-      const response = await axios.post('http://localhost:5000/api/chat/CreateChat',  data);
+      const response = await axios.post('http://localhost:5000/api/chat/new-chat',  data);
       getCurrentChat(response.data);
       userChats();
      

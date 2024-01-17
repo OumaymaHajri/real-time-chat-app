@@ -5,8 +5,8 @@ const router = express.Router();
 
 router.post('/signup', signupUser);
 router.post('/login', loginUser);
-router.get('/find/:userId', findUser);
-router.get('/getusers/:searchTerm', getUsers);
+router.get('/user/:userId', findUser);
+router.get('/users/:searchTerm', getUsers);
 
 
 

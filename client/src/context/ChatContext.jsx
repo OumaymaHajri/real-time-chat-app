@@ -82,7 +82,7 @@ export const ChatProvider = ({ children, user }) => {
 
             if (user) {
 
-                const response = await axios.get(`http://localhost:5000/api/chat/getUserChats/${user?._id}`);
+                const response = await axios.get(`http://localhost:5000/api/chat/chats/${user?._id}`);
                 setUserChats(response.data);
 
  
@@ -103,7 +103,7 @@ export const ChatProvider = ({ children, user }) => {
             if (user?._id) {
                 setUserChatError(null);
 
-                const response = await axios.get(`http://localhost:5000/api/messages/chatMessages/${currentChat?._id}`);
+                const response = await axios.get(`http://localhost:5000/api/messages/messages/${currentChat?._id}`);
                 setMessages(response.data);
             }
         }

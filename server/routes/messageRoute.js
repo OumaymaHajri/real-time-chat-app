@@ -3,9 +3,9 @@ const { getChatMessages, createMessage,getLastMessage } = require('../controller
 
 const router = express.Router();
 
-router.get('/chatMessages/:chatId', getChatMessages);
-router.get('/lastMessage/:chatId', getLastMessage);
-router.post('/createMessage' , createMessage);
+router.get('/messages/:chatId', getChatMessages);
+router.get('/last-message/:chatId', getLastMessage);
+router.post('/message' , createMessage);
 
 
 module.exports = router;
