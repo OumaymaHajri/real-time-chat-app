@@ -45,19 +45,6 @@ Before you begin, ensure you have the following installed:
 - Real-time chat functionality
 - Search for a username to initiate a new conversation
   
-# API Endpoints
- 
-- `/api/user/signup` - POST: Register a new user
-- `/api/user/login` - POST: Log in an existing user
-- `/api/user/:userId` - GET: Find a user by userId
-- `/api/users/:searchTerm` - GET: Get users based on a search term
-- `/api/new-chat` - POST: Create a new chat
-- `/api/chats/:userId` - GET: Get chats for a specific user
-- `/api/chat/:firstId/:secondId` - GET: Get a specific chat between two users
-- `/api/messages/:chatId` - GET: Get messages for a specific chat
-- `/api/last-message/:chatId` - GET: Get the last message for a specific chat
-- `/api/message` - POST: Create a new message
-
 
 # Dependencies
 - Server:
